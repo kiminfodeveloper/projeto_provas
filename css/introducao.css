@@ -1,0 +1,37 @@
+.question {
+  line-height: 2rem;
+}
+
+input {
+  cursor: pointer;
+}
+
+.question-select {
+  flex-direction: column;
+}
+
+.question-select label {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.question-select label:hover {
+  color: rgba(255, 255, 255, 0.897);
+}
+
+.title-test {
+  font-weight: bold;
+}
+
+button {
+  margin-top: 1rem;
+  width: 100px;
+  height: 50px;
+  border-radius: 0.5rem;
+  background-color: #f6f6;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(255, 102, 255, 0.795);
+}
