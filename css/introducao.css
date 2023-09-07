@@ -1,0 +1,105 @@
+.question {
+  line-height: 2rem;
+}
+
+input {
+  cursor: pointer;
+}
+
+.question-select {
+  flex-direction: column;
+}
+
+.question-select label {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.question-select label:hover {
+  color: rgba(255, 255, 255, 0.897);
+}
+
+.title-test {
+  font-weight: bold;
+}
+
+button {
+  margin-top: 1rem;
+  width: 100px;
+  height: 50px;
+  border-radius: 0.5rem;
+  background-color: #f6f6;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(255, 102, 255, 0.795);
+}
+
+input[type="radio"] {
+  /* Altere a forma para quadrada */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 16px; /* Largura desejada para o quadrado */
+  height: 16px; /* Altura desejada para o quadrado */
+  border: 2px solid #fff; /* Cor da borda quando selecionado */
+  background-color: #fff; /* Cor de fundo quando selecionado */
+  border-radius: 0; /* Remove o arredondamento, tornando-o quadrado */
+  outline: none; /* Remove a borda de foco ao clicar */
+  margin-right: 5px; /* Espaçamento entre os quadrados */
+}
+
+/* Estilo para input tipo radio quando selecionado */
+input[type="radio"]:checked {
+  /* Altere a forma para quadrada */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 16px; /* Largura desejada para o quadrado */
+  height: 16px; /* Altura desejada para o quadrado */
+  border: 2px solid rgb(0, 128, 0); /* Cor da borda quando selecionado */
+  background-color: rgb(0, 128, 0); /* Cor de fundo quando selecionado */
+  border-radius: 0; /* Remove o arredondamento, tornando-o quadrado */
+  outline: none; /* Remove a borda de foco ao clicar */
+  margin-right: 5px; /* Espaçamento entre os quadrados */
+}
+
+input[name]:checked {
+  color: rgb(0, 128, 0);
+}
+
+.resultado {
+  margin: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 102, 255, 0.233);
+}
+
+#resultado {
+  text-align: center;
+  font-size: 2rem;
+}
+
+#gabarito {
+  text-align: center;
+}
+
+.gabarito {
+  display: none;
+  margin: auto;
+  width: 85%;
+  background-color: #f6f6;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.gabaritoResposta {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  list-style: none;
+  gap: 2rem;
+}
+#erro-respostas-faltando {
+  color: #ff0000;
+}
