@@ -1,3 +1,46 @@
+const modal = document.getElementById("modal");
+const modalLoader = document.getElementById("modalLoader")
+const accessButton = document.getElementById("accessSystem");
+const loader = document.getElementById("loader"); // Selecionar o elemento do loader
+const errorMessage = document.getElementById("errorMessage");
+
+let modalVisible = false; // Inicialmente, o modal está oculto
+
+accessButton.addEventListener("click", (event) => {
+  event.preventDefault(); // Evita o comportamento padrão do formulário
+
+  const loginInput = document.getElementById("login");
+  const passwordInput = document.getElementById("password");
+
+  const login = "admin"; // Defina o login esperado
+  const password = "admin"; // Defina a senha esperada
+
+  if (loginInput.value === login && passwordInput.value === password) {
+    modal.style.display = "none"; // Feche o modal após o login bem-sucedido
+    document.body.classList.remove("modal-open");
+    modalVisible = false; // Define o estado do modal para não visível
+
+    // Mostrar o loader
+    loader.style.display = "block";
+
+    // Simular um atraso de 3 segundos para o loader
+    setTimeout(() => {
+      loader.style.display = "none"; // Ocultar o loader após 3 segundos
+      modalLoader.style.display = "none";
+    }, 3000);
+  } else {
+    errorMessage.innerHTML = `Usuário ou senha inválido`;
+  }
+});
+
+// Verifique se o modal deve ser inicialmente visível
+if (!modalVisible) {
+  modal.style.display = "flex";
+  document.body.classList.add("modal-open");
+  modalVisible = true; // Defina o estado do modal para visível
+}
+
+
 // quiz.js
 // primeira prova
 function calcularNotaIntroducao() {
@@ -108,10 +151,11 @@ function calcularNotaIntroducao() {
     const gabaritoRespostas = document.querySelector(".gabaritoResposta");
     for (let i = 0; i < respostasIntroducaoCorretas.length; i++) {
       const li = document.createElement("li");
-      li.innerHTML = `Pergunta ${i + 1}: Resposta ${respostasIntroducaoCorretas[i]}`;
+      li.innerHTML = `Pergunta ${i + 1}: Resposta ${
+        respostasIntroducaoCorretas[i]
+      }`;
       gabaritoRespostas.appendChild(li);
     }
-    
   } else {
     // Se as credenciais estiverem incorretas, exiba uma mensagem de erro
     erroRespostasFaltando.textContent =
@@ -119,8 +163,7 @@ function calcularNotaIntroducao() {
   }
 }
 
-
-// Windows 
+// Windows
 function calcularNotaWindows() {
   let pontuacao = 0;
 
@@ -229,10 +272,11 @@ function calcularNotaWindows() {
     const gabaritoRespostas = document.querySelector(".gabaritoResposta");
     for (let i = 0; i < respostasWindowsCorretas.length; i++) {
       const li = document.createElement("li");
-      li.innerHTML = `Pergunta ${i + 1}: Resposta ${respostasWindowsCorretas[i]}`;
+      li.innerHTML = `Pergunta ${i + 1}: Resposta ${
+        respostasWindowsCorretas[i]
+      }`;
       gabaritoRespostas.appendChild(li);
     }
-    
   } else {
     // Se as credenciais estiverem incorretas, exiba uma mensagem de erro
     erroRespostasFaltando.textContent =

@@ -14,6 +14,35 @@
     />
   </head>
   <body>
+    <div class="modal-overlay" id="modalLoader">
+      <div class="loader" id="loader">
+        <span class="loader-text">Loading</span>
+        <span class="load"></span>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal-overlay" id="modal">
+      <div class="modal-container">
+        <form class="modal-form">
+          <p class="title-modal">System Education</p>
+          <div>
+            <label for="login">Login:</label>
+            <input type="text" name="login" id="login" />
+          </div>
+          <div>
+            <label for="password">Senha:</label>
+            <input type="password" name="password" id="password" />
+          </div>
+          <div class="text-error">
+            <p id="errorMessage"></p>
+          </div>
+          <button id="accessSystem">Login</button>
+        </form>
+      </div>
+    </div>
+
+  
+
     <!-- navbar -->
     <nav>
       <ul>
@@ -37,7 +66,9 @@
               <a class="no-link test-selection" href="./pages/introducao.html"
                 ><li>Introdução</li></a
               >
-              <a class="no-link test-selection" href="./pages/windows.html"><li>Windows</li></a>
+              <a class="no-link test-selection" href="./pages/windows.html"
+                ><li>Windows</li></a
+              >
               <a class="no-link test-selection" href=""><li>Word</li></a>
               <a class="no-link test-selection" href=""><li>PowerPoint</li></a>
             </ul>
@@ -61,5 +92,6 @@
         </div>
       </div>
     </div>
+    <script src="./js/script.js" defer></script>
   </body>
 </html>
