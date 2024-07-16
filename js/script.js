@@ -283,5 +283,3 @@ function calcularNotaWindows() {
       "Credenciais incorretas. Tente novamente.";
   }
 }
-
-console.log('testando')
